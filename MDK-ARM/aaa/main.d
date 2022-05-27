@@ -40,3 +40,4 @@ aaa\main.o: ..\..\omni_try\UC\DJI.h
 aaa\main.o: ..\..\omni_try\UC\wtr_can.h
 aaa\main.o: ..\..\omni_try\UC\wtr_uart.h
 aaa\main.o: D:\MDK\ARM\ARMCC\Bin\..\include\math.h
+aaa\main.o: ..\UART_COM\nrf_com.h

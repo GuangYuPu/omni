@@ -326,7 +326,7 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>0</uGnu>
+            <uGnu>1</uGnu>
             <useXO>0</useXO>
             <v6Lang>5</v6Lang>
             <v6LangP>3</v6LangP>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;  ../Drivers/CMSIS/Include;  ..\..\omni_try\UC;  ..\..\omni_try\omni</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\..\omni_try\UC;..\..\omni_try\omni;..\UART_COM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -557,6 +557,16 @@
               <FileName>wtr_uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\omni_try\UC\wtr_uart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>as69</GroupName>
+          <Files>
+            <File>
+              <FileName>nrf_com.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UART_COM\nrf_com.c</FilePath>
             </File>
           </Files>
         </Group>

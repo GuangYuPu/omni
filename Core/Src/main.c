@@ -9,10 +9,10 @@
   * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
+  * This software component is licensed by ST under Ultimate Liberty license
+  * SLA0044, the "License"; You may not use this file except in compliance with
+  * the License. You may obtain a copy of the License at:
+  *                             www.st.com/SLA0044
   *
   ******************************************************************************
   */
@@ -32,6 +32,7 @@
 #include "wtr_can.h"
 #include "wtr_uart.h"
 #include "math.h"
+#include "nrf_com.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,9 +55,6 @@
 double robot_vx = 0;
 double robot_vy = 0;
 double robot_rot = 0;
-
-//float pos_lift = 0;
-//float pos_zhuazi = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -101,8 +99,9 @@ int main(void)
   MX_DMA_Init();
   MX_CAN1_Init();
   MX_USART1_UART_Init();
+  MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
-CANFilterInit(&hcan1);
+	CANFilterInit(&hcan1);
 	
 	hDJI[0].motorType = M3508;
 	hDJI[1].motorType = M3508;
@@ -114,15 +113,17 @@ CANFilterInit(&hcan1);
 	Kine_Init(0.55,0.55,0,0);
 	
 	HAL_UART_Receive_DMA(&huart1,JoyStickReceiveData,18);
-  /* USER CODE END 2 */
+  
+	nrf_receive_init();
+	/* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		 robot_vx = (Raw_Data.ch2 - 1024)*3;
-		 robot_vy = (Raw_Data.ch3 - 1024)*3;
-		 robot_rot = -(Raw_Data.ch0 - 1024)*5;
+    robot_vx = (ch2 - 1024)*3;
+		robot_vy = (ch3 - 1024)*3;
+		robot_rot = -(ch0 - 1024)*5;
 		
 		Kine_SetSpeed(robot_vx,robot_vy,robot_rot);
 		
@@ -130,13 +131,7 @@ CANFilterInit(&hcan1);
 		speedServo(-wheel[1].speed,&hDJI[1]);
 		speedServo(-wheel[2].speed,&hDJI[2]);
 		speedServo(-wheel[3].speed,&hDJI[3]);
-//		
-//		if ((Raw_Data.ch2 - 1024)>100) pos_zhuazi += 1;
-//		if ((Raw_Data.ch0 - 1024)>100) pos_lift += 0.5;
-//		
-//		positionServo(pos_zhuazi,&hDJI[0]);
-//		positionServo(pos_lift,&hDJI[2]);
-//		
+
 		CanTransmit_DJI_1234(&hcan1,
                              hDJI[0].speedPID.output,
                              hDJI[1].speedPID.output,

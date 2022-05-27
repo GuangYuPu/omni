@@ -22,15 +22,115 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 D:\stm\DATA\LEARNING\aaa\MDK-ARM\aaa.uvprojx
-Project File Date:  05/07/2022
+Project File Date:  05/27/2022
 
 <h2>Output:</h2>
   
 Warning: *** SUPPORT EXPIRED, NEW PRODUCT SERIAL NUMBER REQUIRED ***
          *** Running with Code Size Limit: 32K                   ***
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\MDK\ARM\ARMCC\Bin'
-Build target 'aaa'
-"aaa\aaa.axf" - 0 Error(s), 1 Warning(s).
+Rebuild target 'aaa'
+assembling startup_stm32f427xx.s...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_it.c...
+compiling stm32f4xx_hal_can.c...
+compiling gpio.c...
+compiling main.c...
+..\..\omni_try\omni\omni.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\DJI.h(64): warning:  #1295-D: Deprecated declaration DJI_Init - give arg types
+  void DJI_Init();
+..\..\omni_try\UC\DJI.h(68): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\Caculate.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\UART_COM\nrf_com.h(39): warning:  #1295-D: Deprecated declaration nrf_Transmit_init - give arg types
+  void nrf_Transmit_init();
+..\UART_COM\nrf_com.h(40): warning:  #1295-D: Deprecated declaration send - give arg types
+  void send();
+..\UART_COM\nrf_com.h(41): warning:  #1295-D: Deprecated declaration nrf_receive_init - give arg types
+  void nrf_receive_init();
+..\UART_COM\nrf_com.h(42): warning:  #1295-D: Deprecated declaration nrf_decode - give arg types
+  void nrf_decode();
+..\UART_COM\nrf_com.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c: 9 warnings, 0 errors
+compiling stm32f4xx_hal_rcc.c...
+compiling usart.c...
+compiling can.c...
+compiling stm32f4xx_hal_msp.c...
+compiling dma.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_exti.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_dma.c...
+compiling omni.c...
+..\..\omni_try\omni\omni.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\omni\omni.c(51): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\omni_try\omni\omni.c: 2 warnings, 0 errors
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling DJI.c...
+..\..\omni_try\UC\DJI.h(64): warning:  #1295-D: Deprecated declaration DJI_Init - give arg types
+  void DJI_Init();
+..\..\omni_try\UC\DJI.h(68): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\DJI.c(95): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if(motor->Calculate.RotorAngle_0_360_Log[NOW] -  motor->Calculate.RotorAngle_0_360_Log[LAST] > (180.0))
+..\..\omni_try\UC\DJI.c: 3 warnings, 0 errors
+compiling nrf_com.c...
+..\UART_COM\nrf_com.h(39): warning:  #1295-D: Deprecated declaration nrf_Transmit_init - give arg types
+  void nrf_Transmit_init();
+..\UART_COM\nrf_com.h(40): warning:  #1295-D: Deprecated declaration send - give arg types
+  void send();
+..\UART_COM\nrf_com.h(41): warning:  #1295-D: Deprecated declaration nrf_receive_init - give arg types
+  void nrf_receive_init();
+..\UART_COM\nrf_com.h(42): warning:  #1295-D: Deprecated declaration nrf_decode - give arg types
+  void nrf_decode();
+..\UART_COM\nrf_com.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\UART_COM\nrf_com.c(64): warning:  #1-D: last line of file ends without a newline
+  //}
+..\UART_COM\nrf_com.c: 6 warnings, 0 errors
+compiling Caculate.c...
+..\..\omni_try\UC\DJI.h(64): warning:  #1295-D: Deprecated declaration DJI_Init - give arg types
+  void DJI_Init();
+..\..\omni_try\UC\DJI.h(68): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\Caculate.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\Caculate.c(49): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\omni_try\UC\Caculate.c: 4 warnings, 0 errors
+compiling wtr_uart.c...
+..\..\omni_try\UC\DJI.h(64): warning:  #1295-D: Deprecated declaration DJI_Init - give arg types
+  void DJI_Init();
+..\..\omni_try\UC\DJI.h(68): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\wtr_uart.c(73): warning:  #223-D: function "nrf_decode" declared implicitly
+          nrf_decode();
+..\..\omni_try\UC\wtr_uart.c: 3 warnings, 0 errors
+compiling wtr_can.c...
+..\..\omni_try\UC\DJI.h(64): warning:  #1295-D: Deprecated declaration DJI_Init - give arg types
+  void DJI_Init();
+..\..\omni_try\UC\DJI.h(68): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\omni_try\UC\wtr_can.c: 2 warnings, 0 errors
+compiling stm32f4xx_hal_uart.c...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=15228 RO-data=636 RW-data=88 ZI-data=2736  
+FromELF: creating hex file...
+"aaa\aaa.axf" - 0 Error(s), 30 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,7 +154,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.4.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:46
 </pre>
 </body>
 </html>

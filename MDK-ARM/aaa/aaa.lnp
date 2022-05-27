@@ -30,6 +30,7 @@
 "aaa\dji.o"
 "aaa\wtr_can.o"
 "aaa\wtr_uart.o"
+"aaa\nrf_com.o"
 --library_type=microlib --strict --scatter "aaa\aaa.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
